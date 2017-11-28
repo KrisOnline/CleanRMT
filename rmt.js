@@ -18,8 +18,7 @@ function hash(pokemon, format) {//gets dex number
 	if (dex[pokemon]) return dex[pokemon];
 	if (~pokemon.indexOf("-")) {
 		let data = dex[pokemon.substr(0, pokemon.indexOf("-")).trim()];
-		if (format === "serebii") data += "-" + pokemon[pokemon.indexOf("-") + 1];
-		if (format === "paraiso" && ~pokemon.indexOf("mega")) data += "-mega"; //todo: add support for formes
+		if (format === "paraiso" && ~pokemon.indexOf("mega")) data += "-mega";
 		return data;
 	}
 	return pokemon;
@@ -130,18 +129,16 @@ function getImgs(format, team) {
 function getImg(format, pokemon) {
 	if (!formats[format]) return;
 	if (pokemon === "mime jr.") pokemon = "mimejr";
-	if (pokemon === "mime jr." && format === "icons") pokemon = "mime-jr";
-	if (baseImage[pokemon]) format = 'xyanimated';
+	// if (baseImage[pokemon]) format = 'xyanimated';
 	let fdata = formats[format];
-	let output = fdata[0] + (fdata[2] ? hash(pokemon, fdata[2]) : pokemon) + fdata[1];
-	for (let mon in formes) {
-		for (let form in formes[mon]) {
-			if (pokemon === formes[mon] && pokemon.toLowerCase().substr(0, formes[mon[form]].length + 1) === formes[mon[form]]) {
-				output = fdata[0] + (fdata[2] ? hash(pokemon, fdata[2]) : pokemon) + formes[mon[form[formats[format]]]] + fdata[1];
-			}
-		}
+	if (pokemon in formes[pokemon]) {
+		if (format === 'icons') pokemon = hash(pokemon, fdata[2]) + formes[pokemon]["icons"];
+		if (format === 'shuffle') pokemon = hash(pokemon, fdata[2]) + formes[pokemon]["shuffle"];
+		if (format === 'xyanimated') pokemon = pokemon + formes[pokemon]["xyanimated"];
+		if (format === 'xy') pokemon = pokemon + formes[pokemon]["xy"];
+		if (format === 'smd') pokemon = pokemon + formes[pokemon]["smd"];
 	}
-	return '[img]' + output + '[/img]';
+	return '[img]' + fdata[0] + (fdata[2] ? hash(pokemon, fdata[2]) : pokemon) + fdata[1] + '[/img]';
 }
 
 function toTitle(text, options) { //This function is a disaster lol

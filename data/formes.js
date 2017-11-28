@@ -2,323 +2,1108 @@
 
 module.exports = {
 	"venusaur": {
-		"mega": ["-m", "", "-mega", "-mega", "-m"]
+		"mega": {
+			"icons": "-m",
+			"shuffle": "",
+			"xyanimated": "-mega",
+			"xy": "-mega",
+			"smd": "-m"
+		}
 	},
 	"charizard": {
-		"megax": ["-mx", "", "-megax", "-megax", "-mx"],
-		"megay": ["-my", "", "-megay", "-megay", "-my"]
+		"megax": {
+			"icons": "-mx",
+			"shuffle": "",
+			"xyanimated": "-megax",
+			"xy": "-megax",
+			"smd": "-mx"
+		},
+		"megay": {
+			"icons": "-my",
+			"shuffle": "",
+			"xyanimated": "-megay",
+			"xy": "-megay",
+			"smd": "-my"
+		}
 	},
 	"blastoise": {
-		"mega": ["-m", "", "-mega", "-mega", "-m"]
+		"mega": {
+			"icons": "-m",
+			"shuffle": "",
+			"xyanimated": "-mega",
+			"xy": "-mega",
+			"smd": "-m"
+		}
 	},
 	"beedrill": {
-		"mega": ["-m", "", "-mega", "-mega", "-m"]
+		"mega": {
+			"icons": "-m",
+			"shuffle": "",
+			"xyanimated": "-mega",
+			"xy": "-mega",
+			"smd": "-m"
+		}
 	},
 	"pidgeot": {
-		"mega": ["-m", "", "-mega", "-mega", "-m"]
+		"mega": {
+			"icons": "-m",
+			"shuffle": "",
+			"xyanimated": "-mega",
+			"xy": "-mega",
+			"smd": "-m"
+		}
 	},
 	"rattata": {
-		"alola": ["-a", "", "-alola", "-alola", "-a"]
+		"alola": {
+			"icons": "-a",
+			"shuffle": "",
+			"xyanimated": "-alola",
+			"xy": "-alola",
+			"smd": "-a"
+		}
 	},
 	"raticate": {
-		"alola": ["-a", "", "-alola", "-alola", "-a"],
-		"alolatotem": ["-a", "", "-alola", "-alola", "-a"]
+		"alola": {
+			"icons": "-a",
+			"shuffle": "",
+			"xyanimated": "-alola",
+			"xy": "-alola",
+			"smd": "-a"
+		},
+		"alolatotem": {
+			"icons": "-a",
+			"shuffle": "",
+			"xyanimated": "-alola",
+			"xy": "-alola",
+			"smd": "-a"
+		}
 	},
 	"pikachu": {
-		"cosplay": ["-c", "", "-cosplay", "-cosplay", ""],
-		"belle": ["-b", "", "-belle", "-belle", ""],
-		"libre": ["-l", "", "-libre", "-libre", ""],
-		"phd": ["-phd", "", "-phd", "-phd", ""],
-		"popstar": ["-ps", "", "-cosplay", "-cosplay", ""],
-		"rockstar": ["-r", "", "-cosplay", "-cosplay", ""],
-		"original": ["-o", "", "-original", "-original", ""],
-		"hoenn": ["-h", "", "-hoenn", "-hoenn", ""],
-		"sinnoh": ["-s", "", "-sinnoh", "-sinnoh", ""],
-		"unova": ["-u", "", "-unova", "-unova", ""],
-		"kalos": ["-k", "", "-kalos", "-kalos", ""],
-		"alola": ["-a", "-"-. "-alola", "-alola", ""],
-		"partner": ["-p", "", "-partner", "-partner", ""]
+		"cosplay": {
+			"icons": "-c",
+			"shuffle": "",
+			"xyanimated": "-cosplay",
+			"xy": "-cosplay",
+			"smd": ""
+		},
+		"belle": {
+			"icons": "-b",
+			"shuffle": "",
+			"xyanimated": "-belle",
+			"xy": "-belle",
+			"smd": ""
+		},
+		"libre": {
+			"icons": "-l",
+			"shuffle": "",
+			"xyanimated": "-libre",
+			"xy": "-libre",
+			"smd": ""
+		},
+		"phd": {
+			"icons": "-phd",
+			"shuffle": "",
+			"xyanimated": "-phd",
+			"xy": "-phd",
+			"smd": ""
+		},
+		"popstar": {
+			"icons": "-ps",
+			"shuffle": "",
+			"xyanimated": "-cosplay",
+			"xy": "-cosplay",
+			"smd": ""
+		},
+		"rockstar": {
+			"icons": "-r",
+			"shuffle": "",
+			"xyanimated": "-cosplay",
+			"xy": "-cosplay",
+			"smd": ""
+		},
+		"original": {
+			"icons": "-o",
+			"shuffle": "",
+			"xyanimated": "-original",
+			"xy": "-original",
+			"smd": ""
+		},
+		"hoenn": {
+			"icons": "-h",
+			"shuffle": "",
+			"xyanimated": "-hoenn",
+			"xy": "-hoenn",
+			"smd": ""
+		},
+		"sinnoh": {
+			"icons": "-s",
+			"shuffle": "",
+			"xyanimated": "-sinnoh",
+			"xy": "-sinnoh",
+			"smd": ""
+		},
+		"unova": {
+			"icons": "-u",
+			"shuffle": "",
+			"xyanimated": "-unova",
+			"xy": "-unova",
+			"smd": ""
+		},
+		"kalos": {
+			"icons": "-k",
+			"shuffle": "",
+			"xyanimated": "-kalos",
+			"xy": "-kalos",
+			"smd": ""
+		},
+		"alola": {
+			"icons": "-a",
+			"shuffle": "",
+			"xyanimated": "-alola",
+			"xy": "-alola",
+			"smd": ""
+		},
+		"partner": {
+			"icons": "-p",
+			"shuffle": "",
+			"xyanimated": "-partner",
+			"xy": "-partner",
+			"smd": ""
+		}
 	},
 	"raichu": {
-		"alola": ["-a", "", "-alola", "-alola", "-a"]
+		"alola": {
+			"icons": "-a",
+			"shuffle": "",
+			"xyanimated": "-alola",
+			"xy": "-alola",
+			"smd": "-a"
+		}
 	},
 	"sandshrew": {
-		"alola": ["-a", "", "-alola", "-alola", "-a"]
+		"alola": {
+			"icons": "-a",
+			"shuffle": "",
+			"xyanimated": "-alola",
+			"xy": "-alola",
+			"smd": "-a"
+		}
 	},
 	"sandslash": {
-		"alola": ["-a", "", "-alola", "-alola", "-a"]
+		"alola": {
+			"icons": "-a",
+			"shuffle": "",
+			"xyanimated": "-alola",
+			"xy": "-alola",
+			"smd": "-a"
+		}
 	},
 	"vulpix": {
-		"alola": ["-a", "", "-alola", "-alola", "-a"]
+		"alola": {
+			"icons": "-a",
+			"shuffle": "",
+			"xyanimated": "-alola",
+			"xy": "-alola",
+			"smd": "-a"
+		}
 	},
 	"ninetales": {
-		"alola": ["-a", "", "-alola", "-alola", "-a"]
+		"alola": {
+			"icons": "-a",
+			"shuffle": "",
+			"xyanimated": "-alola",
+			"xy": "-alola",
+			"smd": "-a"
+		}
 	},
 	"diglett": {
-		"alola": ["-a", "", "-alola", "-alola", "-a"]
+		"alola": {
+			"icons": "-a",
+			"shuffle": "",
+			"xyanimated": "-alola",
+			"xy": "-alola",
+			"smd": "-a"
+		}
 	},
 	"dugtrio": {
-		"alola": ["-a", "", "-alola", "-alola", "-a"]
+		"alola": {
+			"icons": "-a",
+			"shuffle": "",
+			"xyanimated": "-alola",
+			"xy": "-alola",
+			"smd": "-a"
+		}
 	},
 	"meowth": {
-		"alola": ["-a", "", "-alola", "-alola", "-a"]
+		"alola": {
+			"icons": "-a",
+			"shuffle": "",
+			"xyanimated": "-alola",
+			"xy": "-alola",
+			"smd": "-a"
+		}
 	},
 	"persian": {
-		"alola": ["-a", "", "-alola", "-alola", "-a"]
+		"alola": {
+			"icons": "-a",
+			"shuffle": "",
+			"xyanimated": "-alola",
+			"xy": "-alola",
+			"smd": "-a"
+		}
 	},
 	"alakazam": {
-		"mega": ["-m", "", "-mega", "-mega", "-m"]
+		"mega": {
+			"icons": "-m",
+			"shuffle": "",
+			"xyanimated": "-mega",
+			"xy": "-mega",
+			"smd": "-m"
+		}
 	},
 	"geodude": {
-		"alola": ["-a", "", "-alola", "-alola", "-a"]
+		"alola": {
+			"icons": "-a",
+			"shuffle": "",
+			"xyanimated": "-alola",
+			"xy": "-alola",
+			"smd": "-a"
+		}
 	},
 	"graveler": {
-		"alola": ["-a", "", "-alola", "-alola", "-a"]
+		"alola": {
+			"icons": "-a",
+			"shuffle": "",
+			"xyanimated": "-alola",
+			"xy": "-alola",
+			"smd": "-a"
+		}
 	},
 	"golem": {
-		"alola": ["-a", "", "-alola", "-alola", "-a"]
+		"alola": {
+			"icons": "-a",
+			"shuffle": "",
+			"xyanimated": "-alola",
+			"xy": "-alola",
+			"smd": "-a"
+		}
 	},
 	"slowbro": {
-		"mega": ["-m", "", "-mega", "-mega", "-m"]
+		"mega": {
+			"icons": "-m",
+			"shuffle": "",
+			"xyanimated": "-mega",
+			"xy": "-mega",
+			"smd": "-m"
+		}
 	},
 	"grimer": {
-		"alola": ["-a", "", "-alola", "-alola", "-a"]
+		"alola": {
+			"icons": "-a",
+			"shuffle": "",
+			"xyanimated": "-alola",
+			"xy": "-alola",
+			"smd": "-a"
+		}
 	},
 	"muk": {
-		"alola": ["-a", "", "-alola", "-alola", "-a"]
+		"alola": {
+			"icons": "-a",
+			"shuffle": "",
+			"xyanimated": "-alola",
+			"xy": "-alola",
+			"smd": "-a"
+		}
 	},
 	"gengar": {
-		"mega": ["-m", "", "-mega", "-mega", "-m"]
+		"mega": {
+			"icons": "-m",
+			"shuffle": "",
+			"xyanimated": "-mega",
+			"xy": "-mega",
+			"smd": "-m"
+		}
 	},
 	"exeggutor": {
-		"alola": ["-a", "", "-alola", "-alola", "-a"]
+		"alola": {
+			"icons": "-a",
+			"shuffle": "",
+			"xyanimated": "-alola",
+			"xy": "-alola",
+			"smd": "-a"
+		}
 	},
 	"marowak": {
-		"alola": ["-a", "", "-alola", "-alola", "-a"],
-		"alolatotem": ["-a", "", "-alola", "-alola", "-a"]
+		"alola": {
+			"icons": "-a",
+			"shuffle": "",
+			"xyanimated": "-alola",
+			"xy": "-alola",
+			"smd": "-a"
+		},
+		"alolatotem": {
+			"icons": "-a",
+			"shuffle": "",
+			"xyanimated": "-alola",
+			"xy": "-alola",
+			"smd": "-a"
+		}
 	},
 	"kangaskhan": {
-		"mega": ["-m", "", "-mega", "-mega", "-m"]
+		"mega": {
+			"icons": "-m",
+			"shuffle": "",
+			"xyanimated": "-mega",
+			"xy": "-mega",
+			"smd": "-m"
+		}
 	},
 	"pinsir": {
-		"mega": ["-m", "", "-mega", "-mega", "-m"]
+		"mega": {
+			"icons": "-m",
+			"shuffle": "",
+			"xyanimated": "-mega",
+			"xy": "-mega",
+			"smd": "-m"
+		}
 	},
 	"gyarados": {
-		"mega": ["-m", "", "-mega", "-mega", "-m"]
+		"mega": {
+			"icons": "-m",
+			"shuffle": "",
+			"xyanimated": "-mega",
+			"xy": "-mega",
+			"smd": "-m"
+		}
 	},
 	"aerodactyl": {
-		"mega": ["-m", "", "-mega", "-mega", "-m"]
+		"mega": {
+			"icons": "-m",
+			"shuffle": "",
+			"xyanimated": "-mega",
+			"xy": "-mega",
+			"smd": "-m"
+		}
 	},
 	"mewtwo": {
-		"megax": ["-mx", "", "-megax", "-megax", "-mx"],
-		"megay": ["-my", "", "-megay", "-megay", "-my"]
+		"megax": {
+			"icons": "-mx",
+			"shuffle": "",
+			"xyanimated": "-megax",
+			"xy": "-megax",
+			"smd": "-mx"
+		},
+		"megay": {
+			"icons": "-my",
+			"shuffle": "",
+			"xyanimated": "-megay",
+			"xy": "-megay",
+			"smd": "-my"
+		}
 	},
 	"ampharos": {
-		"mega": ["-m", "", "-mega", "-mega", "-m"]
+		"mega": {
+			"icons": "-m",
+			"shuffle": "",
+			"xyanimated": "-mega",
+			"xy": "-mega",
+			"smd": "-m"
+		}
 	},
 	"steelix": {
-		"mega": ["-m", "", "-mega", "-mega", "-m"]
+		"mega": {
+			"icons": "-m",
+			"shuffle": "",
+			"xyanimated": "-mega",
+			"xy": "-mega",
+			"smd": "-m"
+		}
 	},
 	"scizor": {
-		"mega": ["-m", "", "-mega", "-mega", "-m"]
+		"mega": {
+			"icons": "-m",
+			"shuffle": "",
+			"xyanimated": "-mega",
+			"xy": "-mega",
+			"smd": "-m"
+		}
 	},
 	"heracross": {
-		"mega": ["-m", "", "-mega", "-mega", "-m"]
+		"mega": {
+			"icons": "-m",
+			"shuffle": "",
+			"xyanimated": "-mega",
+			"xy": "-mega",
+			"smd": "-m"
+		}
 	},
 	"houndoom": {
-		"mega": ["-m", "", "-mega", "-mega", "-m"]
+		"mega": {
+			"icons": "-m",
+			"shuffle": "",
+			"xyanimated": "-mega",
+			"xy": "-mega",
+			"smd": "-m"
+		}
 	},
 	"tyranitar": {
-		"mega": ["-m", "", "-mega", "-mega", "-m"]
+		"mega": {
+			"icons": "-m",
+			"shuffle": "",
+			"xyanimated": "-mega",
+			"xy": "-mega",
+			"smd": "-m"
+		}
 	},
 	"sceptile": {
-		"mega": ["-m", "", "-mega", "-mega", "-m"]
+		"mega": {
+			"icons": "-m",
+			"shuffle": "",
+			"xyanimated": "-mega",
+			"xy": "-mega",
+			"smd": "-m"
+		}
 	},
 	"blaziken": {
-		"mega": ["-m", "", "-mega", "-mega", "-m"]
+		"mega": {
+			"icons": "-m",
+			"shuffle": "",
+			"xyanimated": "-mega",
+			"xy": "-mega",
+			"smd": "-m"
+		}
 	},
 	"swampert": {
-		"mega": ["-m", "", "-mega", "-mega", "-m"]
+		"mega": {
+			"icons": "-m",
+			"shuffle": "",
+			"xyanimated": "-mega",
+			"xy": "-mega",
+			"smd": "-m"
+		}
 	},
 	"gardevoir": {
-		"mega": ["-m", "", "-mega", "-mega", "-m"]
+		"mega": {
+			"icons": "-m",
+			"shuffle": "",
+			"xyanimated": "-mega",
+			"xy": "-mega",
+			"smd": "-m"
+		}
 	},
 	"sableye": {
-		"mega": ["-m", "", "-mega", "-mega", "-m"]
+		"mega": {
+			"icons": "-m",
+			"shuffle": "",
+			"xyanimated": "-mega",
+			"xy": "-mega",
+			"smd": "-m"
+		}
 	},
 	"mawile": {
-		"mega": ["-m", "", "-mega", "-mega", "-m"]
+		"mega": {
+			"icons": "-m",
+			"shuffle": "",
+			"xyanimated": "-mega",
+			"xy": "-mega",
+			"smd": "-m"
+		}
 	},
 	"aggron": {
-		"mega": ["-m", "", "-mega", "-mega", "-m"]
+		"mega": {
+			"icons": "-m",
+			"shuffle": "",
+			"xyanimated": "-mega",
+			"xy": "-mega",
+			"smd": "-m"
+		}
 	},
 	"medicham": {
-		"mega": ["-m", "", "-mega", "-mega", "-m"]
+		"mega": {
+			"icons": "-m",
+			"shuffle": "",
+			"xyanimated": "-mega",
+			"xy": "-mega",
+			"smd": "-m"
+		}
 	},
 	"manectric": {
-		"mega": ["-m", "", "-mega", "-mega", "-m"]
+		"mega": {
+			"icons": "-m",
+			"shuffle": "",
+			"xyanimated": "-mega",
+			"xy": "-mega",
+			"smd": "-m"
+		}
 	},
 	"sharpedo": {
-		"mega": ["-m", "", "-mega", "-mega", "-m"]
+		"mega": {
+			"icons": "-m",
+			"shuffle": "",
+			"xyanimated": "-mega",
+			"xy": "-mega",
+			"smd": "-m"
+		}
 	},
 	"camerupt": {
-		"mega": ["-m", "", "-mega", "-mega", "-m"]
+		"mega": {
+			"icons": "-m",
+			"shuffle": "",
+			"xyanimated": "-mega",
+			"xy": "-mega",
+			"smd": "-m"
+		}
 	},
 	"altaria": {
-		"mega": ["-m", "", "-mega", "-mega", "-m"]
+		"mega": {
+			"icons": "-m",
+			"shuffle": "",
+			"xyanimated": "-mega",
+			"xy": "-mega",
+			"smd": "-m"
+		}
 	},
 	"castform": {
-		"sunny": ["-s", "", "-sunny", "-sunny", ""],
-		"rainy": ["-r", "", "-rainy", "-rainy", ""],
-		"snowy": ["-i", "", "-snowy", "-snowy", ""]
+		"sunny": {
+			"icons": "-s",
+			"shuffle": "",
+			"xyanimated": "-sunny",
+			"xy": "-sunny",
+			"smd": ""
+		},
+		"rainy": {
+			"icons": "-r",
+			"shuffle": "",
+			"xyanimated": "-rainy",
+			"xy": "-rainy",
+			"smd": ""
+		},
+		"snowy": {
+			"icons": "-i",
+			"shuffle": "",
+			"xyanimated": "-snowy",
+			"xy": "-snowy",
+			"smd": ""
+		}
 	},
 	"banette": {
-		"mega": ["-m", "", "-mega", "-mega", "-m"]
+		"mega": {
+			"icons": "-m",
+			"shuffle": "",
+			"xyanimated": "-mega",
+			"xy": "-mega",
+			"smd": "-m"
+		}
 	},
 	"absol": {
-		"mega": ["-m", "", "-mega", "-mega", "-m"]
+		"mega": {
+			"icons": "-m",
+			"shuffle": "",
+			"xyanimated": "-mega",
+			"xy": "-mega",
+			"smd": "-m"
+		}
 	},
 	"glalie": {
-		"mega": ["-m", "", "-mega", "-mega", "-m"]
+		"mega": {
+			"icons": "-m",
+			"shuffle": "",
+			"xyanimated": "-mega",
+			"xy": "-mega",
+			"smd": "-m"
+		}
 	},
 	"salamence": {
-		"mega": ["-m", "", "-mega", "-mega", "-m"]
+		"mega": {
+			"icons": "-m",
+			"shuffle": "",
+			"xyanimated": "-mega",
+			"xy": "-mega",
+			"smd": "-m"
+		}
 	},
 	"metagross": {
-		"mega": ["-m", "", "-mega", "-mega", "-m"]
+		"mega": {
+			"icons": "-m",
+			"shuffle": "",
+			"xyanimated": "-mega",
+			"xy": "-mega",
+			"smd": "-m"
+		}
 	},
 	"latios": {
-		"mega": ["-m", "", "-mega", "-mega", "-m"]
+		"mega": {
+			"icons": "-m",
+			"shuffle": "",
+			"xyanimated": "-mega",
+			"xy": "-mega",
+			"smd": "-m"
+		}
 	},
 	"latias": {
-		"mega": ["-m", "", "-mega", "-mega", "-m"]
+		"mega": {
+			"icons": "-m",
+			"shuffle": "",
+			"xyanimated": "-mega",
+			"xy": "-mega",
+			"smd": "-m"
+		}
 	},
 	"kyogre": {
-		"primal": ["-p", "", "-primal", "-primal", "-p"]
+		"primal": {
+			"icons": "-p",
+			"shuffle": "",
+			"xyanimated": "-primal",
+			"xy": "-primal",
+			"smd": "-p"
+		}
 	},
 	"groudon": {
-		"primal": ["-p", "", "-primal", "-primal", "-p"]
+		"primal": {
+			"icons": "-p",
+			"shuffle": "",
+			"xyanimated": "-primal",
+			"xy": "-primal",
+			"smd": "-p"
+		}
 	},
 	"rayquaza": {
-		"mega": ["-m", "", "-mega", "-mega", "-m"]
+		"mega": {
+			"icons": "-m",
+			"shuffle": "",
+			"xyanimated": "-mega",
+			"xy": "-mega",
+			"smd": "-m"
+		}
 	},
 	"deoxys": {
-		"attack": ["a", "", "-attack", "-attack", "-a"],
-		"defense": ["d", "", "-defense", "-defense", "-d"],
-		"speed": ["s", "", "-speed", "-speed", "-s"]
+		"attack": {
+			"icons": "a",
+			"shuffle": "",
+			"xyanimated": "-attack",
+			"xy": "-attack",
+			"smd": "-a"
+		},
+		"defense": {
+			"icons": "d",
+			"shuffle": "",
+			"xyanimated": "-defense",
+			"xy": "-defense",
+			"smd": "-d"
+		},
+		"speed": {
+			"icons": "s",
+			"shuffle": "",
+			"xyanimated": "-speed",
+			"xy": "-speed",
+			"smd": "-s"
+		}
 	},
 	"burmy": {
-		"sandy": ["-s", "", "-sandy", "-sandy", "-s"],
-		"trash": ["-t", "", "-trash", "-trash", "-t"]
+		"sandy": {
+			"icons": "-s",
+			"shuffle": "",
+			"xyanimated": "-sandy",
+			"xy": "-sandy",
+			"smd": "-s"
+		},
+		"trash": {
+			"icons": "-t",
+			"shuffle": "",
+			"xyanimated": "-trash",
+			"xy": "-trash",
+			"smd": "-t"
+		}
 	},
 	"wormadam": {
-		"sandy": ["-s", "", "-sandy", "-sandy", "-s"],
-		"trash": ["-t", "", "-trash", "-trash", "-t"]
+		"sandy": {
+			"icons": "-s",
+			"shuffle": "",
+			"xyanimated": "-sandy",
+			"xy": "-sandy",
+			"smd": "-s"
+		},
+		"trash": {
+			"icons": "-t",
+			"shuffle": "",
+			"xyanimated": "-trash",
+			"xy": "-trash",
+			"smd": "-t"
+		}
 	},
 	"cherrim": {
-		"sunshine": ["-s", "", "-sunshine", "-sunshine", "-s"]
+		"sunshine": {
+			"icons": "-s",
+			"shuffle": "",
+			"xyanimated": "-sunshine",
+			"xy": "-sunshine",
+			"smd": "-s"
+		}
 	},
 	"lopunny": {
-		"mega": ["-m", "", "-mega", "-mega", "-m"]
+		"mega": {
+			"icons": "-m",
+			"shuffle": "",
+			"xyanimated": "-mega",
+			"xy": "-mega",
+			"smd": "-m"
+		}
 	},
 	"garchomp": {
-		"mega": ["-m", "", "-mega", "-mega", "-m"]
+		"mega": {
+			"icons": "-m",
+			"shuffle": "",
+			"xyanimated": "-mega",
+			"xy": "-mega",
+			"smd": "-m"
+		}
 	},
 	"lucario": {
-		"mega": ["-m", "", "-mega", "-mega", "-m"]
+		"mega": {
+			"icons": "-m",
+			"shuffle": "",
+			"xyanimated": "-mega",
+			"xy": "-mega",
+			"smd": "-m"
+		}
 	},
 	"abomasnow": {
-		"mega": ["-m", "", "-mega", "-mega", "-m"]
+		"mega": {
+			"icons": "-m",
+			"shuffle": "",
+			"xyanimated": "-mega",
+			"xy": "-mega",
+			"smd": "-m"
+		}
 	},
 	"gallade": {
-		"mega": ["-m", "", "-mega", "-mega", "-m"]
+		"mega": {
+			"icons": "-m",
+			"shuffle": "",
+			"xyanimated": "-mega",
+			"xy": "-mega",
+			"smd": "-m"
+		}
 	},
 	"rotom": {
-		"fan": ["s", "", "-fan", "-fan", "-s"],
-		"frost": ["f", "", "-frost", "-frost", "-f"],
-		"heat": ["h", "", "-heat", "-heat", "-h"],
-		"mow": ["m", "", "-mow", "-mow", "-m"],
-		"wash": ["w", "", "-wash", "-wash", "-w"]
+		"fan": {
+			"icons": "s",
+			"shuffle": "",
+			"xyanimated": "-fan",
+			"xy": "-fan",
+			"smd": "-s"
+		},
+		"frost": {
+			"icons": "f",
+			"shuffle": "",
+			"xyanimated": "-frost",
+			"xy": "-frost",
+			"smd": "-f"
+		},
+		"heat": {
+			"icons": "h",
+			"shuffle": "",
+			"xyanimated": "-heat",
+			"xy": "-heat",
+			"smd": "-h"
+		},
+		"mow": {
+			"icons": "m",
+			"shuffle": "",
+			"xyanimated": "-mow",
+			"xy": "-mow",
+			"smd": "-m"
+		},
+		"wash": {
+			"icons": "w",
+			"shuffle": "",
+			"xyanimated": "-wash",
+			"xy": "-wash",
+			"smd": "-w"
+		}
 	},
 	"giratina": {
-		"origin": ["o", "", "-origin", "-origin", "-o"]
+		"origin": {
+			"icons": "o",
+			"shuffle": "",
+			"xyanimated": "-origin",
+			"xy": "-origin",
+			"smd": "-o"
+		}
 	},
 	"shaymin": {
-		"sky": ["s", "", "-sky", "-sky", "-s"]
+		"sky": {
+			"icons": "s",
+			"shuffle": "",
+			"xyanimated": "-sky",
+			"xy": "-sky",
+			"smd": "-s"
+		}
 	},
 	"audino": {
-		"mega": ["-m", "", "-mega", "-mega", "-m"]
+		"mega": {
+			"icons": "-m",
+			"shuffle": "",
+			"xyanimated": "-mega",
+			"xy": "-mega",
+			"smd": "-m"
+		}
 	},
 	"basculin": {
-		"bluestriped": ["-b", "", "-bluestriped", "-bluestriped", "-b"]
+		"bluestriped": {
+			"icons": "-b",
+			"shuffle": "",
+			"xyanimated": "-bluestriped",
+			"xy": "-bluestriped",
+			"smd": "-b"
+		}
 	},
 	"darmanitan": {
-		"zen": ["d", "", "-zen", "-zen", "-d"]
+		"zen": {
+			"icons": "d",
+			"shuffle": "",
+			"xyanimated": "-zen",
+			"xy": "-zen",
+			"smd": "-d"
+		}
 	},
 	"tornadus": {
-		"therian": ["-s", "", "-therian", "-therian", "-s"]
+		"therian": {
+			"icons": "-s",
+			"shuffle": "",
+			"xyanimated": "-therian",
+			"xy": "-therian",
+			"smd": "-s"
+		}
 	},
 	"thundurus": {
-		"therian": ["-s", "", "-therian", "-therian", "-s"]
+		"therian": {
+			"icons": "-s",
+			"shuffle": "",
+			"xyanimated": "-therian",
+			"xy": "-therian",
+			"smd": "-s"
+		}
 	},
 	"landorus": {
-		"therian": ["-s", "", "-therian", "-therian", "-s"]
+		"therian": {
+			"icons": "-s",
+			"shuffle": "",
+			"xyanimated": "-therian",
+			"xy": "-therian",
+			"smd": "-s"
+		}
 	},
 	"kyurem": {
-		"black": ["-b", "", "-black", "-black", "-b"],
-		"white": ["-w", "", "-white", "-white", "-w"]
+		"black": {
+			"icons": "-b",
+			"shuffle": "",
+			"xyanimated": "-black",
+			"xy": "-black",
+			"smd": "-b"
+		},
+		"white": {
+			"icons": "-w",
+			"shuffle": "",
+			"xyanimated": "-white",
+			"xy": "-white",
+			"smd": "-w"
+		}
 	},
 	"meloetta": {
-		"pirouette": ["-p", "", "-pirouette", "-pirouette", "-p"]
+		"pirouette": {
+			"icons": "-p",
+			"shuffle": "",
+			"xyanimated": "-pirouette",
+			"xy": "-pirouette",
+			"smd": "-p"
+		}
 	},
 	"greninja": {
-		"ash": ["-a", "", "-ash", "-ash", ""]
+		"ash": {
+			"icons": "-a",
+			"shuffle": "",
+			"xyanimated": "-ash",
+			"xy": "-ash",
+			"smd": ""
+		}
 	},
 	"aegislash": {
-		"blade": ["-b", "", "-blade", "-blade", "-b"]
+		"blade": {
+			"icons": "-b",
+			"shuffle": "",
+			"xyanimated": "-blade",
+			"xy": "-blade",
+			"smd": "-b"
+		}
 	},
 	"pumpkaboo": {
-		"small": ["-s", "", "-small", "-small", ""],
-		"large": ["-l", "", "-large", "-large", ""],
-		"super": ["-h", "", "-super", "-super", ""]
+		"small": {
+			"icons": "-s",
+			"shuffle": "",
+			"xyanimated": "-small",
+			"xy": "-small",
+			"smd": ""
+		},
+		"large": {
+			"icons": "-l",
+			"shuffle": "",
+			"xyanimated": "-large",
+			"xy": "-large",
+			"smd": ""
+		},
+		"super": {
+			"icons": "-h",
+			"shuffle": "",
+			"xyanimated": "-super",
+			"xy": "-super",
+			"smd": ""
+		}
 	},
 	"gourgeist": {
-		"small": ["-s", "", "-small", "-small", ""],
-		"large": ["-l", "", "-large", "-large", ""],
-		"super": ["-h", "", "-super", "-super", ""]
+		"small": {
+			"icons": "-s",
+			"shuffle": "",
+			"xyanimated": "-small",
+			"xy": "-small",
+			"smd": ""
+		},
+		"large": {
+			"icons": "-l",
+			"shuffle": "",
+			"xyanimated": "-large",
+			"xy": "-large",
+			"smd": ""
+		},
+		"super": {
+			"icons": "-h",
+			"shuffle": "",
+			"xyanimated": "-super",
+			"xy": "-super",
+			"smd": ""
+		}
 	},
 	"zygarde": {
-		"10": ["-10", "", "-10", "-10", ""],
-		"complete": ["-c", "", "-complete", "-complete", ""]
+		"10": {
+			"icons": "-10",
+			"shuffle": "",
+			"xyanimated": "-10",
+			"xy": "-10",
+			"smd": ""
+		},
+		"complete": {
+			"icons": "-c",
+			"shuffle": "",
+			"xyanimated": "-complete",
+			"xy": "-complete",
+			"smd": ""
+		}
 	},
 	"diancie": {
-		"mega": ["-m", "", "-mega", "-mega", "-m"]
+		"mega": {
+			"icons": "-m",
+			"shuffle": "",
+			"xyanimated": "-mega",
+			"xy": "-mega",
+			"smd": "-m"
+		}
 	},
 	"hoopa": {
-		"unbound": ["-u", "", "-unbound", "-unbound", "-u"]
+		"unbound": {
+			"icons": "-u",
+			"shuffle": "",
+			"xyanimated": "-unbound",
+			"xy": "-unbound",
+			"smd": "-u"
+		}
 	},
 	"oricorio": {
-		"pau": ["-pau", "", "-pau", "-pau", ""],
-		"pompom": ["-p", "", "-pompom", "-pompom", ""],
-		"sensu": ["-s", "", "-sensu", "-sensu", ""]
+		"pau": {
+			"icons": "-pau",
+			"shuffle": "",
+			"xyanimated": "-pau",
+			"xy": "-pau",
+			"smd": ""
+		},
+		"pompom": {
+			"icons": "-p",
+			"shuffle": "",
+			"xyanimated": "-pompom",
+			"xy": "-pompom",
+			"smd": ""
+		},
+		"sensu": {
+			"icons": "-s",
+			"shuffle": "",
+			"xyanimated": "-sensu",
+			"xy": "-sensu",
+			"smd": ""
+		}
 	},
 	"lycanroc": {
-		"midnight": ["-m", "", "-midnight", "-midnight", ""],
-		"dusk": ["-d", "", "-dusk", "-dusk", ""]
+		"midnight": {
+			"icons": "-m",
+			"shuffle": "",
+			"xyanimated": "-midnight",
+			"xy": "-midnight",
+			"smd": ""
+		},
+		"dusk": {
+			"icons": "-d",
+			"shuffle": "",
+			"xyanimated": "-dusk",
+			"xy": "-dusk",
+			"smd": ""
+		}
 	},
 	"wishiwashi": {
-		"school": ["-s", "", "-school", "-school", ""]
+		"school": {
+			"icons": "-s",
+			"shuffle": "",
+			"xyanimated": "-school",
+			"xy": "-school",
+			"smd": ""
+		}
 	},
 	"minior": {
-		"core": ["-r", "", "", "", ""],
-		"meteor": ["", "", "-meteor", "-meteor", ""]
+		"meteor": {
+			"icons": "",
+			"shuffle": "",
+			"xyanimated": "-meteor",
+			"xy": "-meteor",
+			"smd": ""
+		}
 	},
 	"necrozma": {
-		"duskmane": ["-dm", "", "-duskmane", "-duskmane", ""],
-		"dawnwings": ["-dw", "", "-dawnwings", "-dawnwings", ""],
-		"ultra": ["-u", "", "-ultra", "-ultra", ""],
+		"duskmane": {
+			"icons": "-dm",
+			"shuffle": "",
+			"xyanimated": "-duskmane",
+			"xy": "-duskmane",
+			"smd": ""
+		},
+		"dawnwings": {
+			"icons": "-dw",
+			"shuffle": "",
+			"xyanimated": "-dawnwings",
+			"xy": "-dawnwings",
+			"smd": ""
+		},
+		"ultra": {
+			"icons": "-u",
+			"shuffle": "",
+			"xyanimated": "-ultra",
+			"xy": "-ultra",
+			"smd": ""
+		},
 	},
 	"magearna": {
-		"original": ["-o", "", "-original", "-original", ""]
+		"original": {
+			"icons": "-o",
+			"shuffle": "",
+			"xyanimated": "-original",
+			"xy": "-original",
+			"smd": ""
+		}
 	}
 };
