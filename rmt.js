@@ -1,12 +1,12 @@
 "use strict";
 
 const dex = require('./data/dex.js');
+const formes = require('./data/formes.js');
 const megas = require('./data/megas.js');
 const baseImage = require('./data/base-image.js');
 
 const formats = {
-	"pokesho": ["http://www.pokestadium.com/assets/img/sprites/misc/pokesho/", ".gif"],
-	"icons": ["http://www.pokestadium.com/assets/img/sprites/misc/icons/", ".png"],
+	"icons": ["https://www.serebii.net/pokedex-sm/icon/", ".png", "serebii"],
 	"shuffle": ["http://www.pkparaiso.com/imagenes/shuffle/sprites/", ".png", "paraiso"],
 	"xyanimated": ["http://play.pokemonshowdown.com/sprites/xyani/", ".gif"],
 	"xy": ["http://play.pokemonshowdown.com/sprites/xy/", ".png"],
@@ -133,8 +133,15 @@ function getImg(format, pokemon) {
 	if (pokemon === "mime jr." && format === "icons") pokemon = "mime-jr";
 	if (baseImage[pokemon]) format = 'xyanimated';
 	let fdata = formats[format];
-	let output = '[img]' + fdata[0] + (fdata[2] ? hash(pokemon, fdata[2]) : pokemon) + fdata[1] + '[/img]';
-	return output;
+	let output = fdata[0] + (fdata[2] ? hash(pokemon, fdata[2]) : pokemon) + fdata[1];
+	for (let mon in formes) {
+		for (let form in formes[mon]) {
+			if (pokemon === formes[mon] && pokemon.toLowerCase().substr(0, formes[mon[form]].length + 1) === formes[mon[form]]) {
+				output = fdata[0] + (fdata[2] ? hash(pokemon, fdata[2]) : pokemon) + formes[mon[form[formats[format]]]] + fdata[1];
+			}
+		}
+	}
+	return '[img]' + output + '[/img]';
 }
 
 function toTitle(text, options) { //This function is a disaster lol

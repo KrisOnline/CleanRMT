@@ -749,6 +749,7 @@ module.exports = {
 	"Rockruff": "744",
 	"Lycanroc": "745",
 	"Lycanroc-Midnight": "745",
+	"Lycanroc-Dusk": "745",
 	"Wishiwashi": "746",
 	"Wishiwashi-School": "746",
 	"Mareanie": "747",
@@ -824,7 +825,14 @@ module.exports = {
 	"Kartana": "798",
 	"Guzzlord": "799",
 	"Necrozma": "800",
+	"Necrozma-Dusk-Mane": "800",
+	"Necrozma-Dawn-Wings": "800",
 	"Magearna": "801",
 	"Magearna-Original": "801",
-	"Marshadow": "802"
+	"Marshadow": "802",
+	"Poipole": "803",
+	"Naganadal": "804",
+	"Stakataka": "805",
+	"Blacephalon": "806",
+	"Zeraora": "807",
 }
