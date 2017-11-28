@@ -1,12 +1,11 @@
 "use strict";
 
 const dex = require('./data/dex.js');
-const formes = require('./data/formes.js');
 const megas = require('./data/megas.js');
 const baseImage = require('./data/base-image.js');
 
 const formats = {
-	"icons": ["https://www.serebii.net/pokedex-sm/icon/", ".png", "serebii"],
+	"icons": ["https://www.serebii.net/pokedex-sm/icon/", ".png", "iconserebii"],
 	"shuffle": ["http://www.pkparaiso.com/imagenes/shuffle/sprites/", ".png", "paraiso"],
 	"xyanimated": ["http://play.pokemonshowdown.com/sprites/xyani/", ".gif"],
 	"xy": ["http://play.pokemonshowdown.com/sprites/xy/", ".png"],
@@ -18,7 +17,34 @@ function hash(pokemon, format) {//gets dex number
 	if (dex[pokemon]) return dex[pokemon];
 	if (~pokemon.indexOf("-")) {
 		let data = dex[pokemon.substr(0, pokemon.indexOf("-")).trim()];
+		if (format === "iconserebii") {
+			let noHyphen = ["Deoxys", "Rotom", "Giratina", "Shaymin", "Darmanitan"];
+			let differentFormeLetter = ["Charizard", "Pikachu", "Mewtwo", "Castform", "Tornadus", "Thundurus", "Landorus", "Pumpkaboo", "Gourgeist", "Oricorio", "Necrozma"];
+			if (noHyphen.includes(pokemon)) {
+				if (pokemon === "Rotom" && pokemon[pokemon.indexOf("-F") + 1] === "a") data += "s";
+				if (pokemon === "Darmanitan" && pokemon[pokemon.indexOf("-") + 1] === "z") data += "d";
+				data += pokemon[pokemon.indexOf("-") + 1];
+			}
+			if (differentFormeLetter.includes(pokemon)) {
+				if (pokemon === "Charizard" && pokemon[pokemon.lastIndexOf("-") + 1] === "X") data += "-mx";
+				if (pokemon === "Charizard" && pokemon[pokemon.lastIndexOf("-") + 1] === "Y") data += "-my";
+				if (pokemon === "Pikachu" && pokemon[pokemon.indexOf("-P") + 1] === "h") data += "-phd";
+				if (pokemon === "Pikachu" && pokemon[pokemon.indexOf("-P") + 1] === "o") data += "-ps";
+				if (pokemon === "Mewtwo" && pokemon[pokemon.lastIndexOf("-") + 1] === "X") data += "-mx";
+				if (pokemon === "Mewtwo" && pokemon[pokemon.lastIndexOf("-") + 1] === "Y") data += "-my";
+				if (pokemon === "Castform" && pokemon[pokemon.indexOf("-S") + 1] === "n") data += "-i";
+				if (["Tornadus", "Thundurus", "Landorus"].includes(pokemon) && pokemon[pokemon.indexOf("-") + 1] === "T") data += "-s";
+				if (["Pumpkaboo", "Gourgeist"].includes(pokemon) && pokemon[pokemon.indexOf("-S") + 1] === "u") data += "-h";
+				if (pokemon === "Oricorio" && pokemon[pokemon.indexOf("-P") + 1] === "a") data += "-pau";
+				if (pokemon === "Necrozma" && pokemon[pokemon.lastIndexOf("-") + 1] === "M") data += "-dm";
+				if (pokemon === "Necrozma" && pokemon[pokemon.lastIndexOf("-") + 1] === "W") data += "-dw";
+				if (pokemon === "Necrozma" && pokemon[pokemon.indexOf("-") + 1] === "U") data += "-u";
+			}
+			if (pokemon === "Zygarde" && pokemon[pokemon.indexOf("-") + 1] === "1") data += "-10";
+			data += (pokemon === "Minior" && pokemon[pokemon.indexOf("-") + 1] === "M" ? "" : "-" + pokemon[pokemon.indexOf("-") + 1]);
+		}
 		if (format === "paraiso" && ~pokemon.indexOf("mega")) data += "-mega";
+		if (format === "serebii") data += "-" + pokemon[pokemon.indexOf("-") + 1];
 		return data;
 	}
 	return pokemon;
@@ -131,12 +157,90 @@ function getImg(format, pokemon) {
 	if (pokemon === "mime jr.") pokemon = "mimejr";
 	// if (baseImage[pokemon]) format = 'xyanimated';
 	let fdata = formats[format];
-	if (pokemon in formes[pokemon]) {
-		if (format === 'icons') pokemon = hash(pokemon, fdata[2]) + formes[pokemon]["icons"];
-		if (format === 'shuffle') pokemon = hash(pokemon, fdata[2]) + formes[pokemon]["shuffle"];
-		if (format === 'xyanimated') pokemon = pokemon + formes[pokemon]["xyanimated"];
-		if (format === 'xy') pokemon = pokemon + formes[pokemon]["xy"];
-		if (format === 'smd') pokemon = pokemon + formes[pokemon]["smd"];
+	if (['xyanimated', 'xy'].includes(format) && !fdata[2] && ~pokemon.indexOf("-")) {
+		let hasMega = ["Abomasnow", "Absol", "Aerodactyl", "Aggron", "Alakazam", "Altaria", "Ampharos", "Audino", "Banette", "Beedrill", "Blastoise", "Blaziken", "Camerupt", "Charizard", "Diancie", "Gallade", "Garchomp", "Gardevoir", "Gengar", "Glalie", "Gyarados", "Heracross", "Houndoom", "Kangaskhan", "Latias", "Latios", "Lopunny", "Lucario", "Manectric", "Mawile", "Medicham", "Metagross", "Mewtwo", "Pidgeot", "Pinsir", "Rayquaza", "Sableye", "Salamence", "Sceptile", "Scizor", "Sharpedo", "Slowbro", "Steelix", "Swampert", "Tyranitar", "Venusaur"];
+		if (hasMega.includes(pokemon)) {
+			if (pokemon[pokemon.lastIndexOf("-") + 1] === "X") pokemon += "-megax";
+			if (pokemon[pokemon.lastIndexOf("-") + 1] === "Y") pokemon += "-megay";
+			pokemon += "-mega";
+		}
+		if (pokemon[pokemon.indexOf("-A") + 1] === "l") pokemon += "-alola";
+		if (pokemon === "Deoxys") {
+			if (pokemon[pokemon.indexOf("-") + 1] === "A") pokemon += "-attack";
+			if (pokemon[pokemon.indexOf("-") + 1] === "D") pokemon += "-defense";
+			if (pokemon[pokemon.indexOf("-") + 1] === "S") pokemon += "-speed";
+		}
+		if (pokemon === "Pikachu") {
+			if (pokemon[pokemon.indexOf("-") + 1] === "C" || 
+				pokemon[pokemon.indexOf("-P") + 1] === "h" || 
+				pokemon[pokemon.indexOf("-P") + 1] === "o" || 
+				pokemon[pokemon.indexOf("-") + 1] === "L" || 
+				pokemon[pokemon.indexOf("-") + 1] === "R") pokemon += "-cosplay";
+			if (pokemon[pokemon.indexOf("-") + 1] === "B") pokemon += "-belle";
+			if (pokemon[pokemon.indexOf("-") + 1] === "O") pokemon += "-original";
+			if (pokemon[pokemon.indexOf("-") + 1] === "H") pokemon += "-hoenn";
+			if (pokemon[pokemon.indexOf("-") + 1] === "S") pokemon += "-sinnoh";
+			if (pokemon[pokemon.indexOf("-") + 1] === "U") pokemon += "-unova";
+			if (pokemon[pokemon.indexOf("-") + 1] === "K") pokemon += "-kalos";
+			if (pokemon[pokemon.indexOf("-") + 1] === "P") pokemon += "-partner";
+		}
+		if (pokemon === "Castform") {
+			if (pokemon[pokemon.indexOf("-S") + 1] === "u") pokemon += "-sunny";
+			if (pokemon[pokemon.indexOf("-") + 1] === "R") pokemon += "-rainy";
+			if (pokemon[pokemon.indexOf("-S") + 1] === "n") pokemon += "-snowy";
+		}
+		if (["Groudon", "Kyogre"].includes(pokemon) && pokemon[pokemon.indexOf("-") + 1] === "P") pokemon += "-primal";
+		if (["Burmy", "Wormadam"].includes(pokemon)) {
+			if (pokemon[pokemon.indexOf("-") + 1] === "S") pokemon += "-sandy";
+			if (pokemon[pokemon.indexOf("-") + 1] === "T") pokemon += "-trash";
+		}
+		if (pokemon === "Cherrim" && pokemon[pokemon.indexOf("-") + 1] === "S") pokemon += "-sunshine";
+		if (pokemon === "Rotom") {
+			if (pokemon[pokemon.indexOf("-F") + 1] === "a") pokemon += "-fan";
+			if (pokemon[pokemon.indexOf("-F") + 1] === "r") pokemon += "-frost";
+			if (pokemon[pokemon.indexOf("-") + 1] === "H") pokemon += "-heat";
+			if (pokemon[pokemon.indexOf("-") + 1] === "M") pokemon += "-mow";
+			if (pokemon[pokemon.indexOf("-") + 1] === "W") pokemon += "-wash";
+		}
+		if (pokemon === "Giratina" && pokemon[pokemon.indexOf("-") + 1] === "O") pokemon += "-origin";
+		if (pokemon === "Shaymin" && pokemon[pokemon.indexOf("-") + 1] === "S") pokemon += "-sky";
+		if (pokemon === "Basculin" && pokemon[pokemon.indexOf("-") + 1] === "B") pokemon += "-bluestriped";
+		if (pokemon === "Darmanitan" && pokemon[pokemon.indexOf("-") + 1] === "Z") pokemon += "-zen";
+		if (["Thundurus", "Tornadus", "Landorus"].includes(pokemon) && pokemon[pokemon.indexOf("-") + 1] === "T") pokemon += "-therian";
+		if (pokemon === "Kyurem") {
+			if (pokemon[pokemon.indexOf("-") + 1] === "B") pokemon += "-black";
+			if (pokemon[pokemon.indexOf("-") + 1] === "W") pokemon += "-white";
+		}
+		if (pokemon === "Meloetta" && pokemon[pokemon.indexOf("-") + 1] === "P") pokemon += "-pirouette";
+		if (pokemon === "Aegislash" && pokemon[pokemon.indexOf("-") + 1] === "B") pokemon += "-blade";
+		if (pokemon === "Greninja" && pokemon[pokemon.indexOf("-") + 1] === "A") pokemon += "-ash";
+		if (["Pumpkaboo", "Gourgeist"].includes(pokemon)) {
+			if (pokemon[pokemon.indexOf("-S") + 1] === "m") pokemon += "-small";
+			if (pokemon[pokemon.indexOf("-") + 1] === "L") pokemon += "-large";
+			if (pokemon[pokemon.indexOf("-S") + 1] === "u") pokemon += "-super";
+		}
+		if (pokemon === "Zygarde") {
+			if (pokemon[pokemon.indexOf("-") + 1] === "1") pokemon += "-10";
+			if (pokemon[pokemon.indexOf("-") + 1] === "C") pokemon += "-complete";
+		}
+		if (pokemon === "Hoopa" && pokemon[pokemon.indexOf("-") + 1] === "U") pokemon += "-unbound";
+		if (pokemon === "Oricorio") {
+			if (pokemon[pokemon.indexOf("-P") + 1] === "a") pokemon += "-pau";
+			if (pokemon[pokemon.indexOf("-P") + 1] === "o") pokemon += "-pompom";
+			if (pokemon[pokemon.indexOf("-") + 1] === "S") pokemon += "-sensu";
+		}
+		if (pokemon === "Lycanroc") {
+			if (pokemon[pokemon.indexOf("-") + 1] === "M") pokemon += "-midnight";
+			if (pokemon[pokemon.indexOf("-") + 1] === "D") pokemon += "-dusk";
+		}
+		if (pokemon === "Wishiwashi" && pokemon[pokemon.indexOf("-") + 1] === "S") pokemon += "-school";
+		if (pokemon === "Minior" && pokemon[pokemon.indexOf("-") + 1] === "M") pokemon += "-meteor";
+		if (pokemon === "Necrozma") {
+			if (pokemon[pokemon.lastIndexOf("-") + 1] === "M") pokemon += "-duskmane";
+			if (pokemon[pokemon.lastIndexOf("-") + 1] === "W") pokemon += "-dawnwings";
+			if (pokemon[pokemon.indexOf("-") + 1] === "U") pokemon += "-ultra";
+		}
+		if (pokemon === "Magearna" && pokemon[pokemon.indexOf("-") + 1] === "O") pokemon += "-original";
 	}
 	return '[img]' + fdata[0] + (fdata[2] ? hash(pokemon, fdata[2]) : pokemon) + fdata[1] + '[/img]';
 }
