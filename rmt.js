@@ -14,36 +14,35 @@ const formats = {
 
 function hash(pokemon, format) {//gets dex number
 	pokemon = pokemon[0].toUpperCase() + pokemon.substr(1);
-	if (dex[pokemon]) return dex[pokemon];
+	if (dex[pokemon]) return dex[pokemon][0];
 	if (format === "iconserebii") {
-		if (pokemon === "Charizard-MegaX") dex[pokemon] = "006-mx";
-		if (pokemon === "Charizard-MegaY") dex[pokemon] = "006-my";
-		if (pokemon === "Mewtwo-MegaX") dex[pokemon] = "150-mx";
-		if (pokemon === "Mewtwo-MegaY") dex[pokemon] = "150-my";
-		if (pokemon === "Deoxys-Attack") dex[pokemon] = "386a";
-		if (pokemon === "Deoxys-Defense") dex[pokemon] = "386d";
-		if (pokemon === "Deoxys-Speed") dex[pokemon] = "386s";
-		if (pokemon === "Rotom-Fan") dex[pokemon] = "479s";
-		if (pokemon === "Rotom-Frost") dex[pokemon] = "479f";
-		if (pokemon === "Rotom-Heat") dex[pokemon] = "479h";
-		if (pokemon === "Rotom-Mow") dex[pokemon] = "479m";
-		if (pokemon === "Rotom-Wash") dex[pokemon] = "479w";
-		if (pokemon === "Giratina-Origin") dex[pokemon] = "487o";
-		if (pokemon === "Shaymin-Sky") dex[pokemon] = "492s";
-		if (pokemon === "Basculin-BlueStriped") dex[pokemon] = "550-b";
-		if (pokemon === "Darmanitan-Zen") dex[pokemon] = "555d";
-		if (pokemon === "MeowsticF") dex[pokemon] = "678-f";
-		if (pokemon === "Oricorio-PomPom") dex[pokemon] = "741-p";
-		if (pokemon === "Oricorio-Pau") dex[pokemon] = "741-pau";
-		if (pokemon === "TypeNull") dex[pokemon] = "772";
-		if (pokemon === "Jangmoo") dex[pokemon] = "782";
-		if (pokemon === "Hakamoo") dex[pokemon] = "783";
-		if (pokemon === "Kommoo") dex[pokemon] = "784";
-		if (pokemon === "Necrozma-DuskMane") dex[pokemon] = "800-dm";
-		if (pokemon === "Necrozma-DawnWings") dex[pokemon] = "800-dw";
+		if (pokemon === "Charizard-MegaX") dex[pokemon][0] = "006-mx";
+		if (pokemon === "Charizard-MegaY") dex[pokemon][0] = "006-my";
+		if (pokemon === "Mewtwo-MegaX") dex[pokemon][0] = "150-mx";
+		if (pokemon === "Mewtwo-MegaY") dex[pokemon][0] = "150-my";
+		if (pokemon === "Deoxys-Attack") dex[pokemon][0] = "386a";
+		if (pokemon === "Deoxys-Defense") dex[pokemon][0] = "386d";
+		if (pokemon === "Deoxys-Speed") dex[pokemon][0] = "386s";
+		if (pokemon === "Rotom-Fan") dex[pokemon][0] = "479s";
+		if (pokemon === "Rotom-Frost") dex[pokemon][0] = "479f";
+		if (pokemon === "Rotom-Heat") dex[pokemon][0] = "479h";
+		if (pokemon === "Rotom-Mow") dex[pokemon][0] = "479m";
+		if (pokemon === "Rotom-Wash") dex[pokemon][0] = "479w";
+		if (pokemon === "Giratina-Origin") dex[pokemon][0] = "487o";
+		if (pokemon === "Shaymin-Sky") dex[pokemon][0] = "492s";
+		if (pokemon === "Basculin-BlueStriped") dex[pokemon][0] = "550-b";
+		if (pokemon === "Darmanitan-Zen") dex[pokemon][0] = "555d";
+		if (pokemon === "Oricorio-PomPom") dex[pokemon][0] = "741-p";
+		if (pokemon === "Oricorio-Pau") dex[pokemon][0] = "741-pau";
+		if (pokemon === "TypeNull") dex[pokemon][0] = "772";
+		if (pokemon === "Jangmoo") dex[pokemon][0] = "782";
+		if (pokemon === "Hakamoo") dex[pokemon][0] = "783";
+		if (pokemon === "Kommoo") dex[pokemon][0] = "784";
+		if (pokemon === "Necrozma-DuskMane") dex[pokemon][0] = "800-dm";
+		if (pokemon === "Necrozma-DawnWings") dex[pokemon][0] = "800-dw";
 	}
-	if (format === "paraiso" && ~pokemon.indexOf("mega")) dex[pokemon] += "ega";
-	return dex[pokemon][0];
+	if (format === "paraiso" && ~pokemon.indexOf("mega")) dex[pokemon][0] += "ega";
+	return pokemon;
 }
 
 function removeParenthesizedInfo(line) {
