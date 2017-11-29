@@ -16,6 +16,10 @@ function hash(pokemon, format) {//gets dex number
 	pokemon = pokemon[0].toUpperCase() + pokemon.substr(1);
 	if (dex[pokemon]) return dex[pokemon];
 	if (format === "iconserebii") {
+		if (pokemon === "Charizard-MegaX") dex[pokemon] = "006-mx";
+		if (pokemon === "Charizard-MegaY") dex[pokemon] = "006-my";
+		if (pokemon === "Mewtwo-MegaX") dex[pokemon] = "150-mx";
+		if (pokemon === "Mewtwo-MegaY") dex[pokemon] = "150-my";
 		if (pokemon === "Deoxys-Attack") dex[pokemon] = "386a";
 		if (pokemon === "Deoxys-Defense") dex[pokemon] = "386d";
 		if (pokemon === "Deoxys-Speed") dex[pokemon] = "386s";
@@ -26,7 +30,17 @@ function hash(pokemon, format) {//gets dex number
 		if (pokemon === "Rotom-Wash") dex[pokemon] = "479w";
 		if (pokemon === "Giratina-Origin") dex[pokemon] = "487o";
 		if (pokemon === "Shaymin-Sky") dex[pokemon] = "492s";
+		if (pokemon === "Basculin-BlueStriped") dex[pokemon] = "550-b";
 		if (pokemon === "Darmanitan-Zen") dex[pokemon] = "555d";
+		if (pokemon === "MeowsticF") dex[pokemon] = "678-f";
+		if (pokemon === "Oricorio-PomPom") dex[pokemon] = "741-p";
+		if (pokemon === "Oricorio-Pau") dex[pokemon] = "741-pau";
+		if (pokemon === "TypeNull") dex[pokemon] = "772";
+		if (pokemon === "Jangmoo") dex[pokemon] = "782";
+		if (pokemon === "Hakamoo") dex[pokemon] = "783";
+		if (pokemon === "Kommoo") dex[pokemon] = "784";
+		if (pokemon === "Necrozma-DuskMane") dex[pokemon] = "800-dm";
+		if (pokemon === "Necrozma-DawnWings") dex[pokemon] = "800-dw";
 	}
 	if (format === "paraiso" && ~pokemon.indexOf("mega")) dex[pokemon] += "ega";
 	return pokemon;
@@ -145,6 +159,7 @@ function getImg(format, pokemon) {
 	if (pokemon === "mewtwo-mega-x") pokemon = "mewtwo-megax";
 	if (pokemon === "mewtwo-mega-y") pokemon = "mewtwo-megay";
 	if (pokemon === "basculin-blue-striped") pokemon = "basculin-bluestriped";
+	if (pokemon === "meowstic-f") pokemon = "meowsticf";
 	if (pokemon === "zygarde-10%") pokemon = "zygarde-10";
 	if (pokemon === "gumshoos-totem") pokemon = "gumshoos";
 	if (pokemon === "vikavolt-totem") pokemon = "totem";
