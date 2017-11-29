@@ -43,7 +43,7 @@ function hash(pokemon, format) {//gets dex number
 		if (pokemon === "Necrozma-DawnWings") dex[pokemon] = "800-dw";
 	}
 	if (format === "paraiso" && ~pokemon.indexOf("mega")) dex[pokemon] += "ega";
-	return pokemon;
+	return dex[pokemon][0];
 }
 
 function removeParenthesizedInfo(line) {
