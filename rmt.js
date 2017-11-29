@@ -181,7 +181,7 @@ function getImg(format, pokemon) {
 	if (pokemon === "necrozma-dawn-wings") pokemon = "necrozma-dawnwings";
 	// if (baseImage[pokemon]) format = 'xyanimated';
 	let fdata = formats[format];
-	return '[img]' + fdata[0] + (fdata[2] ? hash(pokemon, fdata[2]) : pokemon) + fdata[1] + '[/img]';
+	return '[img]' + fdata[0] + (fdata[2] ? hash(pokemon, fdata[2]) : pokemon.toLowerCase()) + fdata[1] + '[/img]';
 }
 
 function toTitle(text, options) { //This function is a disaster lol
