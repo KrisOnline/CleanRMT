@@ -16,30 +16,30 @@ function hash(pokemon, format) {//gets dex number
 	pokemon = pokemon[0].toUpperCase() + pokemon.substr(1);
 	if (dex[pokemon]) return dex[pokemon][0];
 	if (format === "iconserebii") {
-		if (pokemon === "Charizard-MegaX") dex[pokemon][0] = "006-mx";
-		if (pokemon === "Charizard-MegaY") dex[pokemon][0] = "006-my";
-		if (pokemon === "Mewtwo-MegaX") dex[pokemon][0] = "150-mx";
-		if (pokemon === "Mewtwo-MegaY") dex[pokemon][0] = "150-my";
-		if (pokemon === "Deoxys-Attack") dex[pokemon][0] = "386a";
-		if (pokemon === "Deoxys-Defense") dex[pokemon][0] = "386d";
-		if (pokemon === "Deoxys-Speed") dex[pokemon][0] = "386s";
-		if (pokemon === "Rotom-Fan") dex[pokemon][0] = "479s";
-		if (pokemon === "Rotom-Frost") dex[pokemon][0] = "479f";
-		if (pokemon === "Rotom-Heat") dex[pokemon][0] = "479h";
-		if (pokemon === "Rotom-Mow") dex[pokemon][0] = "479m";
-		if (pokemon === "Rotom-Wash") dex[pokemon][0] = "479w";
-		if (pokemon === "Giratina-Origin") dex[pokemon][0] = "487o";
-		if (pokemon === "Shaymin-Sky") dex[pokemon][0] = "492s";
-		if (pokemon === "Basculin-BlueStriped") dex[pokemon][0] = "550-b";
-		if (pokemon === "Darmanitan-Zen") dex[pokemon][0] = "555d";
-		if (pokemon === "Oricorio-PomPom") dex[pokemon][0] = "741-p";
-		if (pokemon === "Oricorio-Pau") dex[pokemon][0] = "741-pau";
-		if (pokemon === "TypeNull") dex[pokemon][0] = "772";
+		if (pokemon === "Charizard-megax") dex[pokemon][0] = "006-mx";
+		if (pokemon === "Charizard-megay") dex[pokemon][0] = "006-my";
+		if (pokemon === "Mewtwo-megax") dex[pokemon][0] = "150-mx";
+		if (pokemon === "Mewtwo-megay") dex[pokemon][0] = "150-my";
+		if (pokemon === "Deoxys-attack") dex[pokemon][0] = "386a";
+		if (pokemon === "Deoxys-defense") dex[pokemon][0] = "386d";
+		if (pokemon === "Deoxys-speed") dex[pokemon][0] = "386s";
+		if (pokemon === "Rotom-fan") dex[pokemon][0] = "479s";
+		if (pokemon === "Rotom-frost") dex[pokemon][0] = "479f";
+		if (pokemon === "Rotom-heat") dex[pokemon][0] = "479h";
+		if (pokemon === "Rotom-mow") dex[pokemon][0] = "479m";
+		if (pokemon === "Rotom-wash") dex[pokemon][0] = "479w";
+		if (pokemon === "Giratina-origin") dex[pokemon][0] = "487o";
+		if (pokemon === "Shaymin-sky") dex[pokemon][0] = "492s";
+		if (pokemon === "Basculin-bluestriped") dex[pokemon][0] = "550-b";
+		if (pokemon === "Darmanitan-zen") dex[pokemon][0] = "555d";
+		if (pokemon === "Oricorio-pomom") dex[pokemon][0] = "741-p";
+		if (pokemon === "Oricorio-pau") dex[pokemon][0] = "741-pau";
+		if (pokemon === "Typenull") dex[pokemon][0] = "772";
 		if (pokemon === "Jangmoo") dex[pokemon][0] = "782";
 		if (pokemon === "Hakamoo") dex[pokemon][0] = "783";
 		if (pokemon === "Kommoo") dex[pokemon][0] = "784";
-		if (pokemon === "Necrozma-DuskMane") dex[pokemon][0] = "800-dm";
-		if (pokemon === "Necrozma-DawnWings") dex[pokemon][0] = "800-dw";
+		if (pokemon === "Necrozma-duskmane") dex[pokemon][0] = "800-dm";
+		if (pokemon === "Necrozma-dawnwings") dex[pokemon][0] = "800-dw";
 	}
 	if (format === "paraiso" && ~pokemon.indexOf("mega")) dex[pokemon][0] += "ega";
 	return pokemon;
@@ -158,7 +158,6 @@ function getImg(format, pokemon) {
 	if (pokemon === "mewtwo-mega-x") pokemon = "mewtwo-megax";
 	if (pokemon === "mewtwo-mega-y") pokemon = "mewtwo-megay";
 	if (pokemon === "basculin-blue-striped") pokemon = "basculin-bluestriped";
-	if (pokemon === "meowstic-f") pokemon = "meowsticf";
 	if (pokemon === "zygarde-10%") pokemon = "zygarde-10";
 	if (pokemon === "gumshoos-totem") pokemon = "gumshoos";
 	if (pokemon === "vikavolt-totem") pokemon = "totem";
@@ -179,8 +178,8 @@ function getImg(format, pokemon) {
 	if (pokemon === "necrozma-dusk-mane") pokemon = "necrozma-duskmane";
 	if (pokemon === "necrozma-dawn-wings") pokemon = "necrozma-dawnwings";
 	// if (baseImage[pokemon]) format = 'xyanimated';
-	let fdata = formats[format];
-	return '[img]' + fdata[0] + (fdata[2] ? hash(pokemon, fdata[2]) : pokemon.toLowerCase()) + fdata[1] + '[/img]';
+	// let fdata = formats[format];
+	return '[img]' + formats[format][0] + (formats[format][2] ? hash(pokemon, formats[format][2]) : pokemon) + formats[format][1] + '[/img]';
 }
 
 function toTitle(text, options) { //This function is a disaster lol
